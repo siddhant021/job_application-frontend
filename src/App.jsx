@@ -1,10 +1,10 @@
 import React from 'react'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import Signup from './pages/signup'
 import Login from './pages/login'
 import Home from './pages/Home'
 import 'react-toastify/dist/ReactToastify.css';
 import {ToastContainer} from "react-toastify"
+import Signup from './pages/Signup';
 const App = () => {
   return (
        <Router>
