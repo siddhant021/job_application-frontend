@@ -3,7 +3,7 @@ import '../style/Signup.css'
 import { toast, ToastContainer } from 'react-toastify';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import { server } from '../constant/config';
 const Login = () => {
   const navigate = useNavigate()
   const [formData, setFormData] = useState({
@@ -19,7 +19,7 @@ const Login = () => {
     e.preventDefault();
     const userData = { email, password };
     try {
-      const result = await axios.post('http://localhost:3000/login', userData);
+      const result = await axios.post(`${server}/login`, userData);
       toast.success(result.data.message, {
         autoClose: 1000,
         position: "bottom-center",

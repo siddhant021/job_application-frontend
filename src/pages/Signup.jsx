@@ -4,6 +4,8 @@ import axios from 'axios'
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import '../style/Signup.css'
+import { server } from '../constant/config';
+
 const Signup = () => {
   const navigate = useNavigate();
   const name = useInputValidation("");
@@ -25,7 +27,7 @@ const Signup = () => {
       formData.append("linkdin", linkdin.value);
       formData.append("password", password.value);
       formData.append("experience", experience.value);
-      const result = await axios.post(' http://localhost:3000/register', formData);
+      const result = await axios.post(`${server}/register`, formData);
       if (result.data.message == 'Already Applied') {
         toast.error(result.data.message, {
           autoClose: 1000,
