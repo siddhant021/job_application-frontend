@@ -27,7 +27,7 @@ const Signup = () => {
       formData.append("linkdin", linkdin.value);
       formData.append("password", password.value);
       formData.append("experience", experience.value);
-      const result = await axios.post("https://localhost:3000/register", formData);
+      const result = await axios.post(`${server}/register`, formData);
       if (result.data.message == 'Already Applied') {
         toast.error(result.data.message, {
           autoClose: 1000,
