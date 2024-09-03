@@ -63,3 +63,28 @@ h1{
     justify-content: space-between;
     background-color: lightgrey;
 }
+@media screen and (max-width: 800px) {
+    .main-box{
+       width: 70%;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .main-box{
+       width: 90%;
+    }
+    .box{
+         width: 70%;
+    }
+  }
+
+  
+  @media screen and (max-width: 430px) {
+    .main-box{
+       width: 100%;
+       margin: -20px;
+    }
+    .box{
+        width: 100%;
+    }
+  }
